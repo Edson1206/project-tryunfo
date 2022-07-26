@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
-import PropTypes, { bool, func, string } from 'prop-types';
+import { bool, func, string } from 'prop-types';
 
 class Form extends Component {
   render() {
-    const { cardName, cardDescription, cardAttr1,
-      cardAttr2, cardAttr3, cardImage, cardRare, cardTrunfo,
-      hasTrunfo, isSaveButtonDisabled, onInputChange, onSaveButtonClick } = this.props;
+    const {
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+      cardTrunfo,
+      hasTrunfo,
+      isSaveButtonDisabled,
+      onInputChange,
+      onSaveButtonClick,
+    } = this.props;
+
     return (
       <form>
         <h2>Adicionar nova carta</h2>
@@ -115,8 +127,8 @@ Form.propTypes = {
   cardAttr3: string.isRequired,
   cardImage: string.isRequired,
   cardRare: string.isRequired,
-  cardTrunfo: bool,
-  hasTrunfo: bool,
+  cardTrunfo: bool.isRequired,
+  hasTrunfo: bool.isRequired,
   isSaveButtonDisabled: bool.isRequired,
   onInputChange: func.isRequired,
   onSaveButtonClick: func.isRequired,
